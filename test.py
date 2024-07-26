@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.linear_model import Ridge
 import joblib
+import datetime
 
 
 
@@ -41,7 +42,7 @@ st.write("""
 This app will take Bitcoin trading data and try to estimate the next price
 """)
 
-st.header(f"Predicted Weighted Price on {df['Day']} {df['Month']} {df['Year']}")
+st.header(f"Predicted Weighted Price on {date + datetime.timedelta(days=1)}")
 st.subheader(f":green[${round(price[0],2)}USD]")
 
 
