@@ -41,7 +41,7 @@ st.write("""
 This app will take Bitcoin trading data and try to estimate the next price
 """)
 
-st.header(f"Predicted Weighted Price on {df.day}")
+st.header(f"Predicted Weighted Price on {df['Day']}")
 st.subheader(f":green[${round(price[0],2)}USD]")
 
 
