@@ -22,12 +22,16 @@ def user_input_features():
             'Year': date.year,
             'Month': date.month,
             'Day': date.day,
+            'Datetime': date
+
            }
     features = pd.DataFrame(data, index=[0])
     return features
 st.sidebar.header('User Input Parameters')
 
 df = user_input_features()
+date = df["Datetime"][0]
+del df["Datetime"]
 
 
 
