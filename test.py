@@ -30,7 +30,7 @@ df = user_input_features()
 
 
 
-model = joblib.load("models/trained_bitcoin_regressor_model.pkl")
+model = joblib.load("trained_bitcoin_regressor_model.pkl")
 price = model.predict(df)
 
 
